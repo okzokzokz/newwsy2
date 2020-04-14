@@ -1,0 +1,35 @@
+import requests
+import random
+import string
+import time
+import uuid
+import itertools
+from itertools import count
+
+a = 200
+b = 404
+
+def id_generator(size=5, chars=string.ascii_uppercase + string.ascii_lowercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+n = id_generator()
+
+
+r = ('https://soundcloud.com/jahseh-onfroy/who-shot-ya/s-'+n)
+response = requests.get('https://soundcloud.com/jahseh-onfroy/who-shot-ya/s-'+n)
+m = response.status_code
+
+while True:
+    n = id_generator()
+    r = ('https://soundcloud.com/jahseh-onfroy/who-shot-ya/s-'+n)
+    m!=a
+
+    print('Not Found: '+r)
+
+else:
+    print('Found: ' +r)
+
+
+
+
+    
